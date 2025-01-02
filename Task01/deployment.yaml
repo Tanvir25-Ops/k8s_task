@@ -15,14 +15,7 @@ spec:
       containers:
       - name: alpine-container
         image: alpine
-        command:
-          - /bin/sh
-          - -c
-          - |
-            while true; do
-              echo "Name: $(NAME)";
-              sleep 5;
-            done
+        command:["/bin/sh", "-c", "while true; do echo \"Name: $NAME\"; sleep 2; done"]                                                            
         env:
         - name: NAME
           valueFrom:
